@@ -1,0 +1,493 @@
+{
+    "machines": [
+        {
+            "display_name": "Big Drink",
+            "id": 1,
+            "is_online": true,
+            "name": "bigdrink",
+            "slots": [
+                {
+                    "active": false,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 204,
+                        "name": "Arizona Iced Tea Half and Half",
+                        "price": 50
+                    },
+                    "machine": 1,
+                    "number": 0
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 237,
+                        "name": "Corona (NA)",
+                        "price": 150
+                    },
+                    "machine": 1,
+                    "number": 1
+                },
+                {
+                    "active": false,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 190,
+                        "name": "Yoohoo",
+                        "price": 60
+                    },
+                    "machine": 1,
+                    "number": 2
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 77,
+                        "name": "Monster",
+                        "price": 20
+                    },
+                    "machine": 1,
+                    "number": 3
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": true,
+                    "item": {
+                        "id": 140,
+                        "name": "Brisk Tea",
+                        "price": 11
+                    },
+                    "machine": 1,
+                    "number": 4
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": true,
+                    "item": {
+                        "id": 200,
+                        "name": "Celsius Choice",
+                        "price": 1
+                    },
+                    "machine": 1,
+                    "number": 5
+                },
+                {
+                    "active": false,
+                    "count": null,
+                    "empty": true,
+                    "item": {
+                        "id": 26,
+                        "name": "Fanta's Choice",
+                        "price": 1
+                    },
+                    "machine": 1,
+                    "number": 6
+                }
+            ]
+        },
+        {
+            "display_name": "Little Drink",
+            "id": 2,
+            "is_online": true,
+            "name": "littledrink",
+            "slots": [
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 4,
+                        "name": "Dr. Pepper",
+                        "price": 15
+                    },
+                    "machine": 2,
+                    "number": 0
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 158,
+                        "name": "Lemonade ",
+                        "price": 12
+                    },
+                    "machine": 2,
+                    "number": 1
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 159,
+                        "name": "Spindrift's Choice",
+                        "price": 95
+                    },
+                    "machine": 2,
+                    "number": 2
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 22,
+                        "name": "Little Drink's Choice",
+                        "price": 15
+                    },
+                    "machine": 2,
+                    "number": 3
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 140,
+                        "name": "Brisk Tea",
+                        "price": 11
+                    },
+                    "machine": 2,
+                    "number": 4
+                }
+            ]
+        },
+        {
+            "display_name": "Snack",
+            "id": 3,
+            "is_online": true,
+            "name": "snack",
+            "slots": [
+                {
+                    "active": false,
+                    "count": 1215752073,
+                    "empty": false,
+                    "item": {
+                        "id": 193,
+                        "name": "Motor Go Spinny",
+                        "price": 0
+                    },
+                    "machine": 3,
+                    "number": 0
+                },
+                {
+                    "active": true,
+                    "count": 1215751795,
+                    "empty": false,
+                    "item": {
+                        "id": 193,
+                        "name": "Motor Go Spinny",
+                        "price": 0
+                    },
+                    "machine": 3,
+                    "number": 1
+                },
+                {
+                    "active": true,
+                    "count": 1,
+                    "empty": false,
+                    "item": {
+                        "id": 234,
+                        "name": "Roblox 10$ Gift Card",
+                        "price": 10000
+                    },
+                    "machine": 3,
+                    "number": 2
+                },
+                {
+                    "active": false,
+                    "count": 0,
+                    "empty": true,
+                    "item": {
+                        "id": 225,
+                        "name": "Circus Animal",
+                        "price": 1
+                    },
+                    "machine": 3,
+                    "number": 3
+                },
+                {
+                    "active": true,
+                    "count": 1,
+                    "empty": false,
+                    "item": {
+                        "id": 208,
+                        "name": "Lifesavers Mint",
+                        "price": 1
+                    },
+                    "machine": 3,
+                    "number": 4
+                },
+                {
+                    "active": true,
+                    "count": 0,
+                    "empty": true,
+                    "item": {
+                        "id": 226,
+                        "name": "Buncha Crunch",
+                        "price": 1
+                    },
+                    "machine": 3,
+                    "number": 5
+                },
+                {
+                    "active": true,
+                    "count": 7,
+                    "empty": false,
+                    "item": {
+                        "id": 228,
+                        "name": "Boom Chicka Pop",
+                        "price": 40
+                    },
+                    "machine": 3,
+                    "number": 6
+                },
+                {
+                    "active": true,
+                    "count": 4,
+                    "empty": false,
+                    "item": {
+                        "id": 235,
+                        "name": "Avan Everyday Card",
+                        "price": 100
+                    },
+                    "machine": 3,
+                    "number": 7
+                },
+                {
+                    "active": false,
+                    "count": 12,
+                    "empty": false,
+                    "item": {
+                        "id": 229,
+                        "name": "Mini Goldfish Choice ",
+                        "price": 20
+                    },
+                    "machine": 3,
+                    "number": 9
+                },
+                {
+                    "active": false,
+                    "count": 8,
+                    "empty": false,
+                    "item": {
+                        "id": 229,
+                        "name": "Mini Goldfish Choice ",
+                        "price": 20
+                    },
+                    "machine": 3,
+                    "number": 10
+                },
+                {
+                    "active": true,
+                    "count": 10,
+                    "empty": false,
+                    "item": {
+                        "id": 231,
+                        "name": "Oreo",
+                        "price": 20
+                    },
+                    "machine": 3,
+                    "number": 11
+                },
+                {
+                    "active": true,
+                    "count": 10,
+                    "empty": false,
+                    "item": {
+                        "id": 232,
+                        "name": "Chips Ahoy Original ",
+                        "price": 45
+                    },
+                    "machine": 3,
+                    "number": 12
+                },
+                {
+                    "active": true,
+                    "count": 4,
+                    "empty": false,
+                    "item": {
+                        "id": 233,
+                        "name": "Hot Wheels Choice",
+                        "price": 150
+                    },
+                    "machine": 3,
+                    "number": 13
+                },
+                {
+                    "active": false,
+                    "count": 0,
+                    "empty": true,
+                    "item": {
+                        "id": 223,
+                        "name": "Reese's (Big Cup)",
+                        "price": 1
+                    },
+                    "machine": 3,
+                    "number": 14
+                },
+                {
+                    "active": false,
+                    "count": 0,
+                    "empty": true,
+                    "item": {
+                        "id": 125,
+                        "name": "Condom 1x",
+                        "price": 2
+                    },
+                    "machine": 3,
+                    "number": 15
+                },
+                {
+                    "active": false,
+                    "count": 0,
+                    "empty": true,
+                    "item": {
+                        "id": 162,
+                        "name": "Sandwich Crackers (cheddar)",
+                        "price": 20
+                    },
+                    "machine": 3,
+                    "number": 16
+                },
+                {
+                    "active": false,
+                    "count": 0,
+                    "empty": true,
+                    "item": {
+                        "id": 110,
+                        "name": "Awake Chocolate",
+                        "price": 15
+                    },
+                    "machine": 3,
+                    "number": 17
+                },
+                {
+                    "active": false,
+                    "count": 0,
+                    "empty": true,
+                    "item": {
+                        "id": 110,
+                        "name": "Awake Chocolate",
+                        "price": 15
+                    },
+                    "machine": 3,
+                    "number": 18
+                }
+            ]
+        },
+        {
+            "display_name": "Bepis",
+            "id": 4,
+            "is_online": true,
+            "name": "bepis",
+            "slots": [
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": true,
+                    "item": {
+                        "id": 156,
+                        "name": "Pepsi Choice",
+                        "price": 1
+                    },
+                    "machine": 4,
+                    "number": 0
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 145,
+                        "name": "Bepis Choice",
+                        "price": 15
+                    },
+                    "machine": 4,
+                    "number": 1
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 227,
+                        "name": "Guinness (NA)",
+                        "price": 150
+                    },
+                    "machine": 4,
+                    "number": 2
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 117,
+                        "name": "Starry",
+                        "price": 15
+                    },
+                    "machine": 4,
+                    "number": 3
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 145,
+                        "name": "Bepis Choice",
+                        "price": 15
+                    },
+                    "machine": 4,
+                    "number": 4
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": false,
+                    "item": {
+                        "id": 27,
+                        "name": "Barq's Root Beer",
+                        "price": 20
+                    },
+                    "machine": 4,
+                    "number": 5
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": true,
+                    "item": {
+                        "id": 117,
+                        "name": "Starry",
+                        "price": 15
+                    },
+                    "machine": 4,
+                    "number": 6
+                },
+                {
+                    "active": true,
+                    "count": null,
+                    "empty": true,
+                    "item": {
+                        "id": 140,
+                        "name": "Brisk Tea",
+                        "price": 11
+                    },
+                    "machine": 4,
+                    "number": 7
+                }
+            ]
+        }
+    ],
+    "message": "Successfully retrieved machine contents for bigdrink, littledrink, snack, bepis"
+}

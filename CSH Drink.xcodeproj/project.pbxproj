@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		375CFB782E996D80004E3203 /* SignInWithCSH in Frameworks */ = {isa = PBXBuildFile; productRef = 375CFB772E996D80004E3203 /* SignInWithCSH */; };
+		375CFB7B2E996DD5004E3203 /* AppAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 375CFB7A2E996DD5004E3203 /* AppAuth */; };
+		375CFB7D2E996DD5004E3203 /* AppAuthCore in Frameworks */ = {isa = PBXBuildFile; productRef = 375CFB7C2E996DD5004E3203 /* AppAuthCore */; };
+		375CFB7F2E996DD5004E3203 /* AppAuthTV in Frameworks */ = {isa = PBXBuildFile; productRef = 375CFB7E2E996DD5004E3203 /* AppAuthTV */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		37D898802E8B9C9D00749D9C /* CSH Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSH Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +30,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375CFB7B2E996DD5004E3203 /* AppAuth in Frameworks */,
+				375CFB782E996D80004E3203 /* SignInWithCSH in Frameworks */,
+				375CFB7F2E996DD5004E3203 /* AppAuthTV in Frameworks */,
+				375CFB7D2E996DD5004E3203 /* AppAuthCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +70,17 @@
 			buildRules = (
 			);
 			dependencies = (
+				375CFB942E99711F004E3203 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				37D898822E8B9C9D00749D9C /* CSH Drink */,
 			);
 			name = "CSH Drink";
 			packageProductDependencies = (
+				375CFB772E996D80004E3203 /* SignInWithCSH */,
+				375CFB7A2E996DD5004E3203 /* AppAuth */,
+				375CFB7C2E996DD5004E3203 /* AppAuthCore */,
+				375CFB7E2E996DD5004E3203 /* AppAuthTV */,
 			);
 			productName = "CSH Drink";
 			productReference = 37D898802E8B9C9D00749D9C /* CSH Drink.app */;
@@ -78,7 +94,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2600;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					37D8987F2E8B9C9D00749D9C = {
 						CreatedOnToolsVersion = 26.0.1;
@@ -94,6 +110,10 @@
 			);
 			mainGroup = 37D898772E8B9C9D00749D9C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				375CFB762E996D80004E3203 /* XCLocalSwiftPackageReference "../SignInWithCSH-iOS" */,
+				375CFB792E996DD5004E3203 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 37D898812E8B9C9D00749D9C /* Products */;
 			projectDirPath = "";
@@ -123,6 +143,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		375CFB942E99711F004E3203 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 375CFB932E99711F004E3203 /* SignInWithCSH */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		37D898892E8B9C9E00749D9C /* Debug */ = {
@@ -184,6 +211,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -241,6 +269,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -256,17 +285,21 @@
 				DEVELOPMENT_TEAM = 5GF7GKNTK4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CSH-Drink-Info.plist";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.ninjacheetah.CSH-Drink";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.csh.applejuice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -288,17 +321,21 @@
 				DEVELOPMENT_TEAM = 5GF7GKNTK4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CSH-Drink-Info.plist";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.ninjacheetah.CSH-Drink";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.csh.applejuice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -332,6 +369,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		375CFB762E996D80004E3203 /* XCLocalSwiftPackageReference "../SignInWithCSH-iOS" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../SignInWithCSH-iOS";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		375CFB792E996DD5004E3203 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/openid/AppAuth-iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 1.7.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		375CFB772E996D80004E3203 /* SignInWithCSH */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SignInWithCSH;
+		};
+		375CFB7A2E996DD5004E3203 /* AppAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 375CFB792E996DD5004E3203 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuth;
+		};
+		375CFB7C2E996DD5004E3203 /* AppAuthCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 375CFB792E996DD5004E3203 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuthCore;
+		};
+		375CFB7E2E996DD5004E3203 /* AppAuthTV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 375CFB792E996DD5004E3203 /* XCRemoteSwiftPackageReference "AppAuth-iOS" */;
+			productName = AppAuthTV;
+		};
+		375CFB932E99711F004E3203 /* SignInWithCSH */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 375CFB762E996D80004E3203 /* XCLocalSwiftPackageReference "../SignInWithCSH-iOS" */;
+			productName = SignInWithCSH;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37D898782E8B9C9D00749D9C /* Project object */;
 }
