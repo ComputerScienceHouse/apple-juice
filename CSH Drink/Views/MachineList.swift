@@ -41,7 +41,7 @@ struct MachineList: View {
                         Label("Drop", systemImage: "arrow.down")
                             .labelStyle(CustomSpacedLabel(spacing: 1))
                     }
-                    .disabled(creditCount < slot.item.price || slot.empty)
+                    .disabled(creditCount < slot.item.price || slot.empty || !slot.active)
                     .buttonStyle(CSHButtonStyle())
                 }
             }
