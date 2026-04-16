@@ -10,14 +10,7 @@ import SignInWithCSH
 
 @main
 struct CSH_DrinkApp: App {
-    @State private var authorizer = CSHAuthorizer(
-        CSHAppConfiguration(
-            clientID: "applejuice",
-            redirectURL: URL(string: "edu.rit.csh.applejuice://oauth2redirect")!,
-            issuer: URL(string: "https://sso.csh.rit.edu/auth/realms/csh")!,
-            scopes: [.openID, .profile, .email]
-        )
-    )
+    @State private var model = DrinkModel()
     
     var body: some Scene {
         WindowGroup {
@@ -25,7 +18,7 @@ struct CSH_DrinkApp: App {
                 .onOpenURL { url in
                     print("got a url: \(url)")
                 }
-                .environmentObject(authorizer)
+                .environment(model)
         }
     }
 }

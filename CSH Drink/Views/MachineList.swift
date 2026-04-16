@@ -8,11 +8,8 @@
 import SwiftUI
 
 struct MachineList: View {
+    @Environment(DrinkModel.self) var model
     @State var machine: DrinkMachine
-    @Binding var creditCount: Int
-    @Binding var dropInProgress: Bool
-    
-    let dropItem: (SelectedItem) -> Void
     
     var body: some View {
         Section(header: Text(machine.display_name)) {
@@ -32,7 +29,7 @@ struct MachineList: View {
                     Spacer()
                     Button(action: {
                         print("user requested to drop \(slot.item.name)")
-                        dropItem(SelectedItem(
+                        model.dropItem(selectedItem: SelectedItem(
                             machine: machine.name,
                             slot: slot.number,
                             cost: slot.item.price
@@ -41,12 +38,12 @@ struct MachineList: View {
                         Label("Drop", systemImage: "arrow.down")
                             .labelStyle(CustomSpacedLabel(spacing: 1))
                     }
-                    .disabled(creditCount < slot.item.price || slot.empty || !slot.active)
+                    .disabled(model.creditCount < slot.item.price || slot.empty || !slot.active)
                     .buttonStyle(CSHButtonStyle())
                 }
             }
         }
-        .disabled(dropInProgress)
+        .disabled(model.dropInProgress)
         .disabled(!machine.is_online)
     }
 }
