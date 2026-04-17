@@ -16,7 +16,7 @@ class DrinkModel {
             clientID: "applejuice",
             redirectURL: URL(string: "edu.rit.csh.applejuice://oauth2redirect")!,
             issuer: URL(string: "https://sso.csh.rit.edu/auth/realms/csh")!,
-            scopes: [.openID, .profile, .email]
+            scopes: [.openID, .profile, .email, .offlineAccess]
         )
     )
     var signInState: CSHAuthorizer.State = .unauthorized

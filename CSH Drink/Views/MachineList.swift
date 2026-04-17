@@ -17,13 +17,14 @@ struct MachineList: View {
                 HStack {
                     VStack(alignment: .leading) {
                         Text(slot.item.name)
-                            .foregroundStyle(slot.empty ? Color.secondary : Color.primary)
+                            .foregroundStyle(slot.empty || !slot.active ? Color.secondary : Color.primary)
                         Text("\(slot.item.price) Credits")
                             .foregroundStyle(.secondary)
+                            .opacity(slot.empty || !slot.active ? 0.5 : 1.0)
                         if let remaining = slot.count {
                             Text("\(slot.count ?? 0) Remaining")
                                 .foregroundStyle(remaining > 0 ? Color.secondary : Color.red)
-                                .opacity(slot.empty ? 0.5 : 1.0)
+                                .opacity(slot.empty || !slot.active ? 0.5 : 1.0)
                         }
                     }
                     Spacer()
