@@ -81,7 +81,7 @@ struct ContentView: View {
                 }
             }
         } else {
-            SignInScreen()
+            SignInView()
         }
     }
 }
