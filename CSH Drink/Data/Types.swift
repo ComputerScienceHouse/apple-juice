@@ -9,26 +9,28 @@ import Foundation
 
 // Parse a single drink machine and all of its items.
 struct DrinkMachine: Decodable, Hashable {
-    // A possible item sold by a machine.
-    struct Slot: Decodable, Hashable {
-        // An individual item in a lot in a machine.
-        struct Item: Decodable, Hashable {
-            let id: Int
-            let name: String
-            let price: Int
-        }
-        let active: Bool
-        let count: Int?
-        let empty: Bool
-        let item: Item
-        let machine: Int
-        let number: Int
-    }
     let id: Int
     let display_name: String
     let is_online: Bool
     let name: String
     let slots: [Slot]
+}
+
+// A possible item sold by a machine.
+struct Slot: Decodable, Hashable {
+    let active: Bool
+    let count: Int?
+    let empty: Bool
+    let item: Item
+    let machine: Int
+    let number: Int
+}
+
+// An individual item inside of a slot in a machine.
+struct Item: Decodable, Hashable {
+    let id: Int
+    let name: String
+    let price: Int
 }
 
 // Struct that probably doesn't need to exist but this made parsing the list of drink machines easy.

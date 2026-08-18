@@ -17,9 +17,7 @@ struct LoadingView: View {
         VStack {
             Image(systemName: loadFinished ? "waterbottle.fill" : "waterbottle")
                 .font(.system(size: 100))
-                .modifier(
-                    LoadingSymbolAnimation(loadFinished: loadFinished)
-                )
+                .modifier(LoadingSymbolAnimation(loadFinished: loadFinished))
                 .foregroundStyle(.accent)
         }
         .onChange(of: loadFinished) {

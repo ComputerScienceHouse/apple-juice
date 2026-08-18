@@ -18,7 +18,7 @@ struct ContentView: View {
         if model.isReadyToDisplay() {
             NavigationStack {
                 ZStack {
-                    if showContent {
+                    if showContent || model.demoMode {
                         drinkContent
                             .transition(
                                 .asymmetric(
@@ -82,23 +82,32 @@ struct ContentView: View {
                             .foregroundStyle(.secondary)
                     }
                     Divider()
+                    
                     NavigationLink(destination: AboutView()) {
                         Label("About", systemImage: "info.circle")
                     }
+                    
                     Button(action: {
                         model.signOut()
                     }) {
                         Label("Sign Out", systemImage: "rectangle.portrait.and.arrow.right")
                     }
                 } label: {
-                    Text("\(model.creditCount) Credits")
-                    Image(systemName: "slider.horizontal.3")
-                        .foregroundStyle(Color.accentColor)
+                    HStack {
+                        HStack(spacing: 4) {
+                            Text("\(model.creditCount)")
+                                .contentTransition(.numericText())
+                            Text("Credits")
+                        }
+                        
+                        Image(systemName: "slider.horizontal.3")
+                            .foregroundStyle(Color.accentColor)
+                    }
                 }
             }
         }
         .onChange(of: model.dropInProgress, initial: false) {
-            if !model.dropInProgress {
+            if !model.dropInProgress && model.dropFinishedTitle != "" {
                 showDropCompleteAlert = true
             }
         }

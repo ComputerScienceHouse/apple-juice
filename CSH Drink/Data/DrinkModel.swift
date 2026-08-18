@@ -94,7 +94,9 @@ class DrinkModel {
                     do {
                         let decoded = try JSONDecoder().decode(CreditsReponse.self, from: data)
                         print("user \(decoded.user.uid) has \(decoded.user.drinkBalance) credits")
-                        self.creditCount = Int(decoded.user.drinkBalance) ?? 0
+                        withAnimation {
+                            self.creditCount = Int(decoded.user.drinkBalance) ?? 0
+                        }
                     } catch {
                         print("json error!!")
                     }
@@ -129,14 +131,14 @@ class DrinkModel {
                 print("drop completion")
             }, receiveValue: { data in
                 do {
+                    // Blank these values so that we know later that if they're not blank, there
+                    // was some sort of error. This is to remove the old behavior where there was
+                    // an alert even for successful drops telling you they succeeded.
+                    self.dropFinishedTitle = ""
+                    self.dropFinishedMessage = ""
+
                     let decoded = try JSONDecoder().decode(DropResponse.self, from: data)
-                    if let drinkBalance = decoded.drinkBalance {
-                        self.creditCount = drinkBalance
-                        self.getDrinkData()
-                        self.dropFinishedTitle = "Drop Successful"
-                        self.dropFinishedMessage = "Enjoy your drink!"
-                        self.dropInProgress = false
-                    } else {
+                    if decoded.drinkBalance == nil {
                         print("drop did not succeed with message: \(decoded.message)")
                         self.dropFinishedTitle = "Couldn't Drop Item"
                         self.dropFinishedMessage = "An error occurred while trying to drop the requested item. Drink replied: \(decoded.message)"
@@ -212,11 +214,11 @@ class DrinkModel {
     func demoDropItem(selectedItem: SelectedItem) async {
         print(selectedItem)
         self.dropInProgress = true
-        creditCount -= selectedItem.cost
+        withAnimation {
+            creditCount -= selectedItem.cost
+        }
         try? await Task.sleep(nanoseconds: 2_000_000_000)
         print("demo drop done!")
-        dropFinishedTitle = "Drop Successful"
-        dropFinishedMessage = "Enjoy your drink!"
         self.dropInProgress = false
     }
 }
