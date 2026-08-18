@@ -59,8 +59,8 @@ class DrinkModel {
                 case .failure(let e):
                     print("encountered error:")
                     print(e)
-                    // There's not better way to handle this yet, so if auth explodes the safest option is to just
-                    // force a signout and have the user log back in from scratch.
+                    // There's not better way to handle this yet, so if auth explodes the safest
+                    // option is to just force a signout and have the user log back in from scratch.
                     self.authorizer.signOut()
                 case .finished:
                     print("inventory completion")
@@ -69,7 +69,9 @@ class DrinkModel {
                 do {
                     let decoded = try JSONDecoder().decode(DrinkMachinesParser.self, from: data)
                     self.drinkMachines = decoded.machines
-                    self.isLoaded = true
+                    withAnimation {
+                        self.isLoaded = true
+                    }
                 } catch {
                     print("json error!!")
                 }
@@ -167,8 +169,8 @@ class DrinkModel {
         self.isLoaded = false
     }
     
-    // This mildly complicated function is required because we need unauthorized + demo mode on to also
-    // count as ready to display data, rather than only authorized.
+    // This mildly complicated function is required because we need unauthorized + demo mode on to
+    // also count as ready to display data, rather than only authorized.
     func isReadyToDisplay() -> Bool {
         if case .authorized = self.signInState {
             return true
@@ -202,7 +204,9 @@ class DrinkModel {
         self.drinkMachines = decoded.machines
         // Load sample credit balance of 250.
         self.creditCount = 250
-        self.isLoaded = true
+        withAnimation {
+            self.isLoaded = true
+        }
     }
     
     func demoDropItem(selectedItem: SelectedItem) async {
