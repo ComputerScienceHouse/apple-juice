@@ -138,7 +138,11 @@ class DrinkModel {
                     self.dropFinishedMessage = ""
 
                     let decoded = try JSONDecoder().decode(DropResponse.self, from: data)
-                    if decoded.drinkBalance == nil {
+                    if let drinkBalance = decoded.drinkBalance {
+                        self.creditCount = drinkBalance
+                        self.getDrinkData()
+                        self.dropInProgress = false
+                    } else {
                         print("drop did not succeed with message: \(decoded.message)")
                         self.dropFinishedTitle = "Couldn't Drop Item"
                         self.dropFinishedMessage = "An error occurred while trying to drop the requested item. Drink replied: \(decoded.message)"
